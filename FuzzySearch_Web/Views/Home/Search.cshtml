@@ -1,0 +1,13 @@
+﻿@model FuzzySearchDemo.Models.Search
+
+<div id="searchresults">
+    <h3>Результаты поиска</h3>
+
+    <b>Коэффициент:</b> @(Math.Round(Model.Relevance, 3))
+    <br><br>
+    <b>Найдено (кратко):</b> @MvcHtmlString.Create(Model.BriefDisplayOfFoundFragments)
+    <br><br>
+    <b>Найдено (развернуто):</b>
+    <br>
+    @MvcHtmlString.Create(Model.FullDisplayOfFoundFragments)
+</div>
